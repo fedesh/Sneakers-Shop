@@ -64,31 +64,39 @@ console.log(pepe.cuentaLocal)
 console.log(Contador.cuantaTotal)
 */
 
-class Usuario {
-    constructor(nombre, apellido, libro, mascotas ) {
-        this.nombre = nombre
-        this.apellido = apellido
-        this.libro = libro
-        this.mascotas = mascotas
-    }
-    getFullName (){
-        console.log(`hola mi nombre es ${nombre} ${apellido}`);
-    }
 
-    addMascotas(){
-        console.log(nombredeMascotas);
-    }
 
-    addBook () {
-        libros.push({
-            nombre: nombredellibro,
-            autor: autordellibro
-        });
+class usuario {
+    constructor(name, surName, books, pets){
+        this.name = name        
+        this.surName = surName  
+        this.books = books      
+        this.pets = pets        
     }
-    getBookNames () {
-        console.log(libros.map((libros) => libros.nombre))
+    getFullName(){
+        return (`${this.name} ${this.surName}`)
+    }
+    addMascota(namePet){
+        return( this.pets.push( namePet ) )
+    }
+    countMascotas(){
+        return(`Mascotas que tiene: ${this.pets.length}`)
+    }
+    addBook(nameBook, author){
+        return( this.books.push ( {nameBook, author} ) )
+    }
+    getBooksName(){
+        const mapNameBooks = this.books.map( book => book.nameBook )
+        console.log(`${this.name} ${this.surName} tiene estos libros: ${mapNameBooks}`)
     }
 }
 
-const usuario1 = new Usuario( "Federico", "Ezequiel", "cronicas de Guerra", "Scooby")
-console.log(usuario1)
+const prueba = new usuario( "Federico", "Shierson", [], [] )
+
+console.log(prueba.getFullName())
+prueba.addMascota("Scooby")
+prueba.addMascota("Tafy")
+console.log(prueba.countMascotas())
+prueba.addBook("Warcraft", "Richard A. Knaak")
+prueba.addBook("Fuentes de Sol", "Richard A. Knaak")
+prueba.getBooksName()
