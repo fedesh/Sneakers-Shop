@@ -67,14 +67,14 @@ console.log(Contador.cuantaTotal)
 
 
 class usuario {
-    constructor(name, surName, books, pets){
+    constructor(name, apellido, books, pets){
         this.name = name        
-        this.surName = surName  
+        this.apellido = apellido 
         this.books = books      
         this.pets = pets        
     }
     getFullName(){
-        return (`${this.name} ${this.surName}`)
+        return (`${this.name} ${this.apellido}`)
     }
     addMascota(namePet){
         return( this.pets.push( namePet ) )
