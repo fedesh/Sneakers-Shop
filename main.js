@@ -87,7 +87,7 @@ class usuario {
     }
     getBooksName(){
         const mapNameBooks = this.books.map( book => book.nameBook )
-        console.log(`${this.name} ${this.surName} tiene estos libros: ${mapNameBooks}`)
+        console.log(`${this.name} ${this.apellido} tiene estos libros: ${mapNameBooks}`)
     }
 }
 
@@ -100,3 +100,25 @@ console.log(prueba.countMascotas())
 prueba.addBook("Warcraft", "Richard A. Knaak")
 prueba.addBook("Fuentes de Sol", "Richard A. Knaak")
 prueba.getBooksName()
+
+
+// clase numero 3
+
+//lo que va entre parentecis son los argumentos, no siempre es obligatorio los parentecis
+
+/*const sumar = (num1, num2, num3) =>{
+    return num1 + num2 - num3
+}*/
+/*
+const sumar = num1 => {
+    return num1 + num1
+}
+
+
+let n1 = 130, n2 = 36, n3 = 63
+
+let suma = sumar(n1,n2) 
+console.log(`la suma de ${n1} mas la de ${n3} es igual a ${suma}`)
+*/
+
+
