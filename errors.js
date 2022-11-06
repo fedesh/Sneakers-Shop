@@ -97,12 +97,14 @@ class Contenedor{
 let contenedor = new Contenedor('productos.json');
 //contenedor.getAll().then(x => console.log(x));
 
-let producto1 = new producto("Soja",1450,"htttps");
+let producto1 = new producto("Air-Force 1",1450,"htttps");
+let producto2 = new producto("Air-Force 3",1450,"htttps");
 //producto1.id = 1
 
 //console.log(JSON.stringify(producto1));
 
 contenedor.Save(producto1).then(x => console.log(x));
+contenedor.Save(producto2).then(x => console.log(x));
 //contenedor.getById(2).then(x => console.log(x));
 /* const leerArchivo = async()=>{
     
